@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import ReactDOM from "react-dom";
 
 import "./App.css";
@@ -12,12 +13,13 @@ function App() {
   // User Login info
   const database = [
     {
-      username: "user1",
-      password: "pass1"
+      username: "eve.holt@reqres.in",
+      password: "5cityslicka"
     },
     {
-      username: "user2",
-      password: "pass2"
+      
+      username: "eve.holt@reqres.in",
+      password: "5cityslicka"
     }
   ];
 
@@ -70,21 +72,40 @@ function App() {
           {renderErrorMessage("pass")}
         </div>
         <div className="button-container">
-          <input type="submit" />
+          <input type="submit"></input> 
+        </div><br></br>
+        <div> 
+        <label class="container">
+  <input type="checkbox" />RememberPassword
+  <span class="checkmark"></span>
+</label>
+       
+        <label className="forgot">ForgotPassword? </label>
         </div>
       </form>
     </div>
   );
 
   return (
+    
     <div className="app">
+    
+      
+    <div class="topnav">
+  <a class="active" href="#home"><h3>VOUCH DIGITAL</h3></a>
+  
+  <a href="#news">Login</a>
+  <div/></div>
+     
       <div className="login-form">
-        <div className="title">Sign In</div>
+        <div className="title"><h1>Welcome Back</h1></div><div className="subtitle"><h2>My Website</h2></div>
         {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
       </div>
     </div>
   );
 }export default App;
+{
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
+};
